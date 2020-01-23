@@ -8,14 +8,13 @@ namespace ProjetoContaBancaria.Repository.Repositories
     public class ClienteRepository : IClienteRepository
     {
         private Contexto contexto;
-
         SqlCommand cmd;
-        public void Delete(Cliente cliente)
+        public void Delete(int Num_Cpf)
         {
             using (cmd = new SqlCommand())
             {
                 cmd.CommandText = "DelCliente";
-                cmd.Parameters.AddWithValue("@Num_Cpf", cliente.Num_Cpf);
+                cmd.Parameters.AddWithValue("@Num_Cpf", Num_Cpf);
 
                 using (contexto = new Contexto())
                 {
@@ -24,12 +23,12 @@ namespace ProjetoContaBancaria.Repository.Repositories
             }
         }
 
-        public Cliente Get(string email)
+        public Cliente Get(string Nom_Email)
         {
             using (cmd = new SqlCommand())
             {
                 cmd.CommandText = "SelDados";
-                cmd.Parameters.AddWithValue("@Nom_Email", email);
+                cmd.Parameters.AddWithValue("@Nom_Email", Nom_Email);
 
                 using (contexto = new Contexto())
                 {
@@ -102,6 +101,21 @@ namespace ProjetoContaBancaria.Repository.Repositories
                 cmd.Parameters.AddWithValue("@Num_Cpf", cliente.Num_Cpf);
                 cmd.Parameters.AddWithValue("@Nom_Email", cliente.Nom_Email);
                 cmd.Parameters.AddWithValue("@Nom_Login", cliente.Nom_Login);
+
+                using (contexto = new Contexto())
+                {
+                    return contexto.ExecutaProcedureRetorno(cmd);
+                }
+            }
+        }
+
+        public int ConsLogin(string Nom_Consulta, string Nom_Senha)
+        {
+            using (cmd = new SqlCommand())
+            {
+                cmd.CommandText = "ConsLogin";
+                cmd.Parameters.AddWithValue("@Nom_Consulta", Nom_Consulta);
+                cmd.Parameters.AddWithValue("@Nom_Senha", Nom_Senha);
 
                 using (contexto = new Contexto())
                 {

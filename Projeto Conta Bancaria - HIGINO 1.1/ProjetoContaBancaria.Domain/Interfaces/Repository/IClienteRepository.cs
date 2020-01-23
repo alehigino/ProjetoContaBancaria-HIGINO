@@ -3,11 +3,12 @@
 namespace ProjetoContaBancaria.Domain.Interfaces.Repository
 {
     public interface IClienteRepository
-        {
-            string Post(Cliente cliente);
-            Cliente Get(string email);
-            void Put(Cliente cliente);
-            void Delete(Cliente cliente);
-            int VerificaDados(Cliente cliente);
-        }
+    {
+        string Post(Cliente cliente);
+        Cliente Get(string Nom_Email);
+        void Put(Cliente cliente);
+        void Delete(int Num_Cpf);
+        int VerificaDados(Cliente cliente);
+        int ConsLogin(string Nom_Consulta, string Nom_Senha);
+    }
 }

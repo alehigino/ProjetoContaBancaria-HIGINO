@@ -32,11 +32,17 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="ClienteService.cs" />
+    <Compile Include="ContaService.cs" />
     <Compile Include="Entities\Cliente.cs" />
     <Compile Include="Entities\Conta.cs" />
-    <Compile Include="Entities\Operacoes.cs" />
+    <Compile Include="Entities\Operacao.cs" />
     <Compile Include="Interfaces\Repository\IClienteRepository.cs" />
+    <Compile Include="Interfaces\Repository\IContaRepository.cs" />
+    <Compile Include="Interfaces\Repository\IOperacaoRepository.cs" />
     <Compile Include="Interfaces\Service\IClienteService.cs" />
+    <Compile Include="Interfaces\Service\IContaService.cs" />
+    <Compile Include="Interfaces\Service\IOperacaoService.cs" />
+    <Compile Include="OperacaoService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup />

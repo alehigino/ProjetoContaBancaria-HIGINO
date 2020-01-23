@@ -19,19 +19,19 @@ namespace ProjetoContaBancaria.Domain
             if(i == 0)
                  _clienteRepository.Post(cliente);
 
-            return "";
+            return "Cliente Cadastrado com Sucesso";
         }
-        public Cliente Get(string email)
+        public Cliente Get(string Nom_Email)
         {
-            return _clienteRepository.Get(email);
+            return _clienteRepository.Get(Nom_Email);
         }
         public void Put(Cliente cliente)
         {
             _clienteRepository.Put(cliente);
         }
-        public void Delete(Cliente cliente)
+        public void Delete(int Num_Cpf)
         {
-            _clienteRepository.Delete(cliente);
+            _clienteRepository.Delete(Num_Cpf);
         }
     }
 }

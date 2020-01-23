@@ -11,9 +11,9 @@ USE "ProjetoContaBancaria1.1";
 	Comentários.........: Criação do banco de dados e das tabelas
 	Tipos de Contas.....: 0 - Conta Corrente
 						  1 - Conta Poupança
-	Tipos de Operações..: 0 - Deposito
-						  1 - Saque
-						  2 - Transferência
+	Tipos de Operações..: Deposito
+						  Saque
+						  Transferência
 	*/
 
 CREATE TABLE Clientes
@@ -31,25 +31,24 @@ CREATE TABLE Clientes
 
 CREATE TABLE Contas
 (
-			Num_ContConta		INT IDENTITY,
-			Num_Conta			INT			NOT NULL,
+			Num_Conta			INT			IDENTITY(1500,2),
 			Vlr_Saldo			DECIMAL(9,2) DEFAULT 0,
 			Dat_Criacao			DATETIME	NOT NULL,
 			Ind_Tipo			CHAR(1)		NOT NULL,
 			Num_Cpf				INT			NOT NULL
 
-			CONSTRAINT PK_Conta PRIMARY KEY (Num_ContConta),
+			CONSTRAINT PK_Conta PRIMARY KEY (Num_Conta),
 			CONSTRAINT FK_Conta_Cliente	FOREIGN KEY (Num_Cpf) REFERENCES Clientes (Num_Cpf) ON DELETE CASCADE
 );
 
 CREATE TABLE Operacoes
 (
 			Num_Operacao		INT IDENTITY,
-			Ind_Tipo			CHAR(1)		 NOT NULL,
+			Nom_Tipo			VARCHAR(15)		 NOT NULL,
 			Dat_Realizacao		DATETIME	 NOT NULL,
 			Vlr_Operacao		DECIMAL(9,2) NOT NULL,
 			Num_Conta			INT
 
 			CONSTRAINT PK_Operacao PRIMARY KEY (Num_Operacao),
-			CONSTRAINT FK_Operacao_Conta FOREIGN KEY (Num_Conta) REFERENCES Contas (Num_ContConta) ON DELETE CASCADE
+			CONSTRAINT FK_Operacao_Conta FOREIGN KEY (Num_Conta) REFERENCES Contas (Num_Conta) ON DELETE CASCADE
 );

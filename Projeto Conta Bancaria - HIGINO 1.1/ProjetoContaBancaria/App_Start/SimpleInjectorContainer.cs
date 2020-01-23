@@ -28,6 +28,10 @@ namespace ProjetoContaBancaria.API.App_Start
         {
             container.Register<IClienteRepository, ClienteRepository>();
             container.Register<IClienteService, ClienteService>();
+            container.Register<IContaRepository, ContaRepository>();
+            container.Register<IContaService, ContaService>();
+            container.Register<IOperacaoRepository, OperacaoRepository>();
+            container.Register<IOperacaoService, OperacaoService>();
         }
 
         private static void RegisterServices()

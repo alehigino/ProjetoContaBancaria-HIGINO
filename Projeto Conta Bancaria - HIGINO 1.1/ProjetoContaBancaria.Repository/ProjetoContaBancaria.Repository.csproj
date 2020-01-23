@@ -47,6 +47,8 @@
     <Compile Include="Contexto.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Repositories\ClienteRepository.cs" />
+    <Compile Include="Repositories\ContaRepository.cs" />
+    <Compile Include="Repositories\OperacaoRepository.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\ProjetoContaBancaria.Domain\ProjetoContaBancaria.Domain.csproj">

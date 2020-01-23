@@ -7,6 +7,6 @@ namespace ProjetoContaBancaria.Domain.Interfaces.Service
         string Post(Cliente cliente);
         Cliente Get(string email);
         void Put(Cliente cliente);
-        void Delete(Cliente cliente);
+        void Delete(int Num_Cpf);
     }
 }

@@ -8,3 +8,13 @@ D:\DADOS\Projeto Conta Bancária - HIGINO 1.1\ProjetoContaBancaria-HIGINO1.1\Pro
 D:\DADOS\Projeto Conta Bancária - HIGINO 1.1\ProjetoContaBancaria-HIGINO1.1\ProjetoContaBancaria.Repository\obj\Debug\ProjetoContaBancaria.Repository.csproj.CopyComplete
 D:\DADOS\Projeto Conta Bancária - HIGINO 1.1\ProjetoContaBancaria-HIGINO1.1\ProjetoContaBancaria.Repository\obj\Debug\ProjetoContaBancaria.Repository.dll
 D:\DADOS\Projeto Conta Bancária - HIGINO 1.1\ProjetoContaBancaria-HIGINO1.1\ProjetoContaBancaria.Repository\obj\Debug\ProjetoContaBancaria.Repository.pdb
+D:\DADOS\Projeto Conta Bancária - HIGINO 1.1\Projeto Conta Bancaria - HIGINO 1.1\ProjetoContaBancaria.Repository\bin\Debug\ProjetoContaBancaria.Repository.dll
+D:\DADOS\Projeto Conta Bancária - HIGINO 1.1\Projeto Conta Bancaria - HIGINO 1.1\ProjetoContaBancaria.Repository\bin\Debug\ProjetoContaBancaria.Repository.pdb
+D:\DADOS\Projeto Conta Bancária - HIGINO 1.1\Projeto Conta Bancaria - HIGINO 1.1\ProjetoContaBancaria.Repository\bin\Debug\ProjetoContaBancaria.Domain.dll
+D:\DADOS\Projeto Conta Bancária - HIGINO 1.1\Projeto Conta Bancaria - HIGINO 1.1\ProjetoContaBancaria.Repository\bin\Debug\System.Data.SqlClient.dll
+D:\DADOS\Projeto Conta Bancária - HIGINO 1.1\Projeto Conta Bancaria - HIGINO 1.1\ProjetoContaBancaria.Repository\bin\Debug\ProjetoContaBancaria.Domain.pdb
+D:\DADOS\Projeto Conta Bancária - HIGINO 1.1\Projeto Conta Bancaria - HIGINO 1.1\ProjetoContaBancaria.Repository\bin\Debug\System.Data.SqlClient.xml
+D:\DADOS\Projeto Conta Bancária - HIGINO 1.1\Projeto Conta Bancaria - HIGINO 1.1\ProjetoContaBancaria.Repository\obj\Debug\ProjetoContaBancaria.Repository.csprojAssemblyReference.cache
+D:\DADOS\Projeto Conta Bancária - HIGINO 1.1\Projeto Conta Bancaria - HIGINO 1.1\ProjetoContaBancaria.Repository\obj\Debug\ProjetoContaBancaria.Repository.csproj.CopyComplete
+D:\DADOS\Projeto Conta Bancária - HIGINO 1.1\Projeto Conta Bancaria - HIGINO 1.1\ProjetoContaBancaria.Repository\obj\Debug\ProjetoContaBancaria.Repository.dll
+D:\DADOS\Projeto Conta Bancária - HIGINO 1.1\Projeto Conta Bancaria - HIGINO 1.1\ProjetoContaBancaria.Repository\obj\Debug\ProjetoContaBancaria.Repository.pdb
