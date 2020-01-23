@@ -1,0 +1,5 @@
+D:\DADOS\Projeto Conta Bancária - HIGINO 1.1\ProjetoContaBancaria-HIGINO1.1\ProjetoContaBancaria.Domain\bin\Debug\ProjetoContaBancaria.Domain.dll
+D:\DADOS\Projeto Conta Bancária - HIGINO 1.1\ProjetoContaBancaria-HIGINO1.1\ProjetoContaBancaria.Domain\bin\Debug\ProjetoContaBancaria.Domain.pdb
+D:\DADOS\Projeto Conta Bancária - HIGINO 1.1\ProjetoContaBancaria-HIGINO1.1\ProjetoContaBancaria.Domain\obj\Debug\ProjetoContaBancaria.Domain.csprojAssemblyReference.cache
+D:\DADOS\Projeto Conta Bancária - HIGINO 1.1\ProjetoContaBancaria-HIGINO1.1\ProjetoContaBancaria.Domain\obj\Debug\ProjetoContaBancaria.Domain.dll
+D:\DADOS\Projeto Conta Bancária - HIGINO 1.1\ProjetoContaBancaria-HIGINO1.1\ProjetoContaBancaria.Domain\obj\Debug\ProjetoContaBancaria.Domain.pdb
