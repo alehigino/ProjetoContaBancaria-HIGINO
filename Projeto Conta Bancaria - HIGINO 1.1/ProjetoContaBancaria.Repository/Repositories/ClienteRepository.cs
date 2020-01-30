@@ -23,12 +23,12 @@ namespace ProjetoContaBancaria.Repository.Repositories
             }
         }
 
-        public Cliente Get(string Nom_Email)
+        public Cliente Get(string Nom_Consulta)
         {
             using (cmd = new SqlCommand())
             {
                 cmd.CommandText = "SelDados";
-                cmd.Parameters.AddWithValue("@Nom_Email", Nom_Email);
+                cmd.Parameters.AddWithValue("@Nom_Consulta", Nom_Consulta);
 
                 using (contexto = new Contexto())
                 {

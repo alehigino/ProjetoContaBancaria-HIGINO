@@ -163,7 +163,7 @@ IF EXISTS (SELECT * FROM dbo.sysobjects WHERE id = object_id(N'[dbo].[SelDados]'
 GO
 
 CREATE PROCEDURE [dbo].[SelDados]
-					  @Nom_Email	varchar(30)
+					  @Nom_Consulta	 varchar(30)
 	AS
 
 	/*
@@ -178,7 +178,8 @@ CREATE PROCEDURE [dbo].[SelDados]
 
 		SELECT *
 			FROM [dbo].[Clientes] WITH(NOLOCK)
-			WHERE Nom_Email = @Nom_Email
+			WHERE Nom_Email = @Nom_Consulta
+					OR Nom_Login = @Nom_Consulta
 
 	END
 GO

@@ -1,6 +1,7 @@
 ﻿using ProjetoContaBancaria.Domain.Entities;
 using ProjetoContaBancaria.Domain.Interfaces.Repository;
 using System;
+using System.Collections.Generic;
 using System.Data.SqlClient;
 
 namespace ProjetoContaBancaria.Repository.Repositories
@@ -68,6 +69,33 @@ namespace ProjetoContaBancaria.Repository.Repositories
             }
 
             return "";
+        }
+
+        public List<Conta> GetContas(int Num_Cpf)
+        {
+            List<Conta> contas = new List<Conta>();
+
+            using (cmd = new SqlCommand())
+            {
+                cmd.CommandText = "SelContas";
+                cmd.Parameters.AddWithValue("@Num_Cpf", Num_Cpf);
+
+
+                using (contexto = new Contexto())
+                {
+                    SqlDataReader dados = contexto.ExecutaComandoRetorno(cmd);
+
+                    while (dados.Read())
+                    {
+                        contas.Add(new Conta
+                        {
+                            Num_Conta = Convert.ToInt32(dados["Num_Conta"]),
+                            Ind_Tipo = Convert.ToChar(dados["Ind_Tipo"])
+                        });
+                    }
+                }
+            }
+            return contas;
         }
 
     }

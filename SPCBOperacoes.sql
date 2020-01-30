@@ -83,7 +83,7 @@ CREATE PROCEDURE [dbo].[OpTransferencia]
 	Autor.............: Alexandre Higino
  	Data..............: 23/01/2020
 	Comentários.......: 0 - Transferência realizada com sucesso
-						1 - Conta à transferir não encontrado
+						1 - Conta à transferir não encontrada
 	*/
 
 	BEGIN
@@ -114,6 +114,31 @@ CREATE PROCEDURE [dbo].[OpTransferencia]
 		END
 
 		RETURN 1
+
+	END
+GO
+
+IF EXISTS (SELECT * FROM dbo.sysobjects WHERE id = object_id(N'[dbo].[OpExtrato]') AND objectproperty(id, N'IsPROCEDURE')=1)
+	DROP PROCEDURE [dbo].[OpExtrato]
+GO
+
+CREATE PROCEDURE [dbo].[OpExtrato]
+					  @Num_Conta	int
+	AS
+
+	/*
+	Documentação
+	Arquivo Fonte.....: SPCBOperacoes.sql
+	Objetivo..........: Extrato de conta
+	Autor.............: Alexandre Higino
+ 	Data..............: 27/01/2020
+	*/
+
+	BEGIN
+
+		SELECT *
+			FROM [dbo].[Operacoes] WITH(NOLOCK)
+			WHERE Num_Conta = @Num_Conta
 
 	END
 GO

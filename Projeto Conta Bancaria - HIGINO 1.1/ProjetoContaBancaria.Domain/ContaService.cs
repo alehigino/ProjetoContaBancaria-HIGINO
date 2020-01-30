@@ -1,6 +1,7 @@
 ﻿using ProjetoContaBancaria.Domain.Entities;
 using ProjetoContaBancaria.Domain.Interfaces.Repository;
 using ProjetoContaBancaria.Domain.Interfaces.Service;
+using System.Collections.Generic;
 
 namespace ProjetoContaBancaria.Domain
 {
@@ -20,6 +21,11 @@ namespace ProjetoContaBancaria.Domain
         public Conta Get(int Num_Conta)
         {
             return _contaRepository.Get(Num_Conta);
+        }
+
+        public List<Conta> GetContas(int Num_Cpf)
+        {
+            return _contaRepository.GetContas(Num_Cpf);
         }
 
         public string Post(Conta conta)

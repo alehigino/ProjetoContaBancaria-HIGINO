@@ -21,9 +21,9 @@ namespace ProjetoContaBancaria.Domain
 
             return "Cliente Cadastrado com Sucesso";
         }
-        public Cliente Get(string Nom_Email)
+        public Cliente Get(string Nom_Consulta)
         {
-            return _clienteRepository.Get(Nom_Email);
+            return _clienteRepository.Get(Nom_Consulta);
         }
         public void Put(Cliente cliente)
         {

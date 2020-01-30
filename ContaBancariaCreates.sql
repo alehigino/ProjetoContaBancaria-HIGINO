@@ -52,3 +52,9 @@ CREATE TABLE Operacoes
 			CONSTRAINT PK_Operacao PRIMARY KEY (Num_Operacao),
 			CONSTRAINT FK_Operacao_Conta FOREIGN KEY (Num_Conta) REFERENCES Contas (Num_Conta) ON DELETE CASCADE
 );
+
+SELECT * FROM CLIENTES
+
+select * from contas
+
+select * from operacoes

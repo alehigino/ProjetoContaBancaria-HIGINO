@@ -8,6 +8,5 @@ namespace ProjetoContaBancaria.Domain.Entities
         public DateTime Dat_Realizacao { get; set; }
         public decimal Vlr_Operacao { get; set; }
         public int Num_Conta { get; set; }
-        public int Num_Aux { get; set; }
     }
 }

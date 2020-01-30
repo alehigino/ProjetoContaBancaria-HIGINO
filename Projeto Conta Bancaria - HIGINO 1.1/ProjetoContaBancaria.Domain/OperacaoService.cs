@@ -1,11 +1,7 @@
 ﻿using ProjetoContaBancaria.Domain.Entities;
 using ProjetoContaBancaria.Domain.Interfaces.Repository;
 using ProjetoContaBancaria.Domain.Interfaces.Service;
-using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace ProjetoContaBancaria.Domain
 {
@@ -17,15 +13,25 @@ namespace ProjetoContaBancaria.Domain
         {
             _operacaoRepository = operacaoRepository;
         }
-        public void RealizarOperacao(Operacao operacao)
+
+        public void Deposito(Operacao operacao)
         {
-            int i;
-            if (operacao.Nom_Tipo == "Deposito")
-                _operacaoRepository.Deposito(operacao);
-            else if (operacao.Nom_Tipo == "Saque")
-                _operacaoRepository.Saque(operacao);
-            else if (operacao.Nom_Tipo == "Transferencia")
-                i = _operacaoRepository.Transferencia(operacao, operacao.Num_Aux);
+            _operacaoRepository.Deposito(operacao);
+        }
+
+        public List<Operacao> Extrato(int Num_Conta)
+        {
+            return _operacaoRepository.Extrato(Num_Conta);
+        }
+
+        public void Saque(Operacao operacao)
+        {
+            _operacaoRepository.Saque(operacao);
+        }
+
+        public int Transferencia(Operacao operacao, int Num_Conta_Env)
+        {
+            return _operacaoRepository.Transferencia(operacao, Num_Conta_Env);
         }
     }
 }

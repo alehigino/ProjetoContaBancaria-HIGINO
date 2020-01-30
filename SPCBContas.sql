@@ -77,3 +77,28 @@ CREATE PROCEDURE [dbo].[DelConta]
 
 	END
 GO
+
+IF EXISTS (SELECT * FROM dbo.sysobjects WHERE id = object_id(N'[dbo].[SelContas]') AND objectproperty(id, N'IsPROCEDURE')=1)
+	DROP PROCEDURE [dbo].[SelContas]
+GO
+
+CREATE PROCEDURE [dbo].[SelContas]
+					  @Num_Cpf	int
+	AS
+
+	/*
+	Documentação
+	Arquivo Fonte.....: SPCBContas.sql
+	Objetivo..........: Seleciona todas as contas de um determinado cliente
+	Autor.............: Alexandre Higino
+ 	Data..............: 27/01/2020
+	*/
+
+	BEGIN
+
+		SELECT Num_Conta, Ind_Tipo
+			FROM [dbo].[Contas] WITH(NOLOCK)
+			WHERE Num_Cpf = @Num_Cpf
+
+	END
+GO
