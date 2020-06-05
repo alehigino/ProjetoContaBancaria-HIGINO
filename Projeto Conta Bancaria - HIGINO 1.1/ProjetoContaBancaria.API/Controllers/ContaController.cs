@@ -23,7 +23,7 @@ namespace ProjetoContaBancaria.API.Controllers
         {
             return _contaService.Get(Num_Conta);
         }
-
+        [HttpGet, Route(template: "api/conta/getcontas")]
         public List<Conta> GetContas(int Num_Cpf)
         {
             return _contaService.GetContas(Num_Cpf);

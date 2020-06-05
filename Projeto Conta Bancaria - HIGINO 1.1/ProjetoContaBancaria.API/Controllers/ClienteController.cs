@@ -35,6 +35,7 @@ namespace ProjetoContaBancaria.API.Controllers
         {
             _clienteService.Put(cliente);
         }
+        [HttpGet, Route(template: "api/cliente/conslogin")]
         public int ConsLogin(string Nom_Consulta, string Nom_Senha)
         {
             return _clienteRepository.ConsLogin(Nom_Consulta, Nom_Senha);

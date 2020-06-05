@@ -1,0 +1,20 @@
+﻿@model ProjetoContaBancaria.Domain.Entities.Cliente
+@{
+    ViewBag.Title = "Index";
+}
+
+
+@using (Html.BeginForm("Fazer_Login", "Home"))
+{
+    <div id="login">
+        <h2>Login</h2>
+        
+        <label for="Nom_Email">Login ou Email</label>
+        @Html.TextBoxFor(cliente => cliente.Nom_Email)
+
+        <label for="Nom_Senha">Senha</label>
+        @Html.TextBoxFor(cliente => cliente.Nom_Senha)
+
+        <input id="Enviar" type="submit" onclick="" />
+    </div>
+}
